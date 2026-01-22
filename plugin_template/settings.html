@@ -1,0 +1,22 @@
+<div class="form-group">
+    <label for="title" class="form-label">Title:</label>
+    <input type="text" id="title" name="title" placeholder="Type something..." required class="form-input">
+</div>
+
+<script>
+    /**
+     * Populate plugin settings form fields on page load when editing an existing plugin instance.
+     *
+     * - `loadPluginSettings` is a boolean flag indicating whether the form
+     *   is editing an existing plugin (true) or creating a new plugin (false).
+     * - `pluginSettings` is an object containing saved values for this plugin.
+     *
+     * This script automatically fills inputs with saved settings.
+     */
+    document.addEventListener('DOMContentLoaded', () => {        
+        if (loadPluginSettings) {
+            // Populate text inputs
+            document.getElementById('title').value = pluginSettings.title || 'Hello World';
+        }
+    });
+</script>
