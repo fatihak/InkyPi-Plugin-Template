@@ -9,7 +9,7 @@ See the [wiki page](https://github.com/fatihak/InkyPi/wiki) for an in depth over
 
 ## Screenshot
 
-![Example of InkyPi-Plugin-Template](./example_1.png)
+![Example of InkyPi-Plugin-Template](./example.png)
 
 ## Installation
 

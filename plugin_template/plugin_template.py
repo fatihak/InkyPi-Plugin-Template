@@ -1,5 +1,6 @@
 from plugins.base_plugin.base_plugin import BasePlugin
 from PIL import Image, ImageDraw, ImageFont
+from utils.app_utils import get_font
 import logging
 
 logger = logging.getLogger(__name__)
@@ -35,17 +36,19 @@ class Template(BasePlugin):
                 The rendered image to be displayed on the device.
         """
         # Example: load a value from plugin settings
-        text = settings.get("title", "Hello World")
+        text = settings.get("title") or "Hello World"
 
         # Target display size, handling display orientation from device config
         dimensions = device_config.get_resolution()
         if device_config.get_config("orientation") == "vertical":
             dimensions = dimensions[::-1]
+        width, height = dimensions
 
         # Create a blank image
         image = Image.new("RGB", (width, height), "white")
         draw = ImageDraw.Draw(image)
-        font = ImageFont.load_default()
+        font_size = width * 0.145
+        font = get_font("Jost", font_size)
 
         # Measure text size
         bbox = draw.textbbox((0, 0), text, font=font)
@@ -54,7 +57,7 @@ class Template(BasePlugin):
 
         # Center text
         x = (width - text_width) // 2
-        y = (height - text_height) // 2
+        y = (height - (text_height*2)) // 2
 
         # Draw text
         draw.text((x, y), text, fill="black", font=font)

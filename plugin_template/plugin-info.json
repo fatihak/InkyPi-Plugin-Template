@@ -1,5 +1,5 @@
 {
     "display_name": "Template Plugin",
-    "id": "inkypi_template",
+    "id": "plugin_template",
     "class": "Template"
 }

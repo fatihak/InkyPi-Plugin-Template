@@ -1,6 +1,6 @@
 <div class="form-group">
     <label for="title" class="form-label">Title:</label>
-    <input type="text" id="title" name="title" placeholder="Type something..." required class="form-input">
+    <input type="text" id="title" name="title" placeholder="Hello World" required class="form-input">
 </div>
 
 <script>
@@ -16,7 +16,7 @@
     document.addEventListener('DOMContentLoaded', () => {        
         if (loadPluginSettings) {
             // Populate text inputs
-            document.getElementById('title').value = pluginSettings.title || 'Hello World';
+            document.getElementById('title').value = pluginSettings.title;
         }
     });
 </script>
