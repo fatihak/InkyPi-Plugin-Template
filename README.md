@@ -1,11 +1,11 @@
 # InkyPi-Plugin-Template
-Use this template for creating new MagicMirror² modules.
+Use this template for creating new InkyPi plugins.
 
 See the [wiki page](https://github.com/fatihak/InkyPi/wiki) for an in depth overview of how to get started.
 
 # InkyPi-Plugin-Template
 
-*InkyPi-Template* is a plugin for [InkyPi](https://github.com/fatihak/InkyPi) that displays ... [Module description]
+*InkyPi-Template* is a plugin for [InkyPi](https://github.com/fatihak/InkyPi) that displays ... [Plugin description]
 
 ## Screenshot
 
@@ -15,33 +15,15 @@ See the [wiki page](https://github.com/fatihak/InkyPi/wiki) for an in depth over
 
 ### Install
 
-In your terminal, navigate to the plugin directory and clone the repository:
+Install the plugin using the InkyPi CLI, providing the GitHub repository URL and the plugin ID:
 
 ```bash
-cd ~/InkyPi/src/modules
-git clone [GitHub url]
-```
-
-Install additional dependencies: (if any are required)
-```bash
-cd ~/InkyPi/src/modules/InkyPi-Template
-source "/usr/local/inkypi/venv_inkypi/bin/activate"
-pip install -r requirements.txt
-deactivate
-```
-
-### Update
-
-Go to the module directory and pull the latest changes:
-
-```bash
-cd ~/InkyPi/src/modules/InkyPi-Template
-git pull
+inkypi install https://github.com/fatihak/InkyPi-Plugin-Template plugin_template
 ```
 
 ## API Keys
 
-- Login in to your account ... []
+- Login in to your account ... [API Key setup instractions]
 ...
 - Store your api key in the .env file with the key `SAMPLE_KEY`
     ```
