@@ -18,7 +18,7 @@ See the [wiki page](https://github.com/fatihak/InkyPi/wiki) for an in depth over
 Install the plugin using the InkyPi CLI, providing the plugin ID and GitHub repository URL:
 
 ```bash
-inkypi install plugin_template https://github.com/fatihak/InkyPi-Plugin-Template
+inkypi plugin install plugin_template https://github.com/fatihak/InkyPi-Plugin-Template
 ```
 
 ## API Keys
